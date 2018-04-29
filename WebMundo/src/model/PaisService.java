@@ -10,12 +10,12 @@ public class PaisService {
 		return paisDao.criar(pais);
 	}
 
-	public void atualizar() {
-		paisDao.atualizar();
+	public void atualizar(int id, String nome, long populacao, double area, String continente) {
+		paisDao.atualizar(id, nome, populacao, area, continente);
 	}
 
-	public void excluir() {
-		paisDao.excluir();
+	public void excluir(int id) {
+		paisDao.excluir(id);
 	}
 
 	public Pais carregar(String nome) {

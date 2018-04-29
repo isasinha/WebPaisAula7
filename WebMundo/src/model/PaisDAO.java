@@ -34,28 +34,29 @@ public class PaisDAO {
 		return pais.getId();
 	}
 
-	public void atualizar() {
+	public void atualizar(int id, String nome, long populacao, double area, String continente) {
 		String sqlUpdate = "UPDATE pais SET nome=?, populacao=?, area=?, continente=? WHERE id=?";
 		// usando o try with resources do Java 7, que fecha o que abriu
 		try (Connection conn = PaisConnectionFactory.conectar();
 				PreparedStatement stm = conn.prepareStatement(sqlUpdate);) {
-			stm.setString(1, pais.getNome());
-			stm.setLong(2, pais.getPopulacao());
-			stm.setDouble(3, pais.getArea());
-			stm.setString(4, pais.getContinente());
-			stm.setInt(5, pais.getId());
+			stm.setString(1, nome);
+			stm.setLong(2, populacao);
+			stm.setDouble(3, area);
+			stm.setString(4, continente);
+			stm.setInt(5, id);
 			stm.execute();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void excluir() {
+
+	public void excluir(int id) {
 		String sqlDelete = "DELETE FROM pais WHERE id = ?";
 		// usando o try with resources do Java 7, que fecha o que abriu
 		try (Connection conn = PaisConnectionFactory.conectar();
 				PreparedStatement stm = conn.prepareStatement(sqlDelete);) {
-			stm.setInt(1, pais.getId());
+			stm.setInt(1, id);
 			stm.execute();
 		} catch (Exception e) {
 			e.printStackTrace();

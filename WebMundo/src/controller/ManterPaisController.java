@@ -90,8 +90,45 @@ public class ManterPaisController extends HttpServlet {
 	        RequestDispatcher view = request.getRequestDispatcher("Busca.jsp");
 	        view.forward(request, response);
 			
-			}
+		}
+		
+		if(acao.equals("alterar")) {
+		    
+			
+			int pId = Integer.parseInt(request.getParameter("id"));
+			String pNome = request.getParameter("nome");
+			long pPopulacao = Long.parseLong(request.getParameter("populacao"));
+			int pArea = Integer.parseInt(request.getParameter("area"));
+			String pContinente = request.getParameter("continente");
+			
+			pais.setNome(pNome);
+			pais.setPopulacao(pPopulacao);
+			pais.setArea(pArea);
+			pais.setContinente(pContinente);
+
+			ps.atualizar(pId, pNome, pPopulacao, pArea, pContinente);
+			
+		    request.setAttribute("pais", pais); 
+		    
+	        RequestDispatcher view = request.getRequestDispatcher("Alterado.jsp");
+	        view.forward(request, response);
+		
+		}
+	
+		if(acao.equals("excluir")) {
+		    
+			
+			int pId = Integer.parseInt(request.getParameter("id"));
+			
+			ps.excluir(pId);
+		
+		   // request.setAttribute("pais", paisRetorno); 
+			
+	        RequestDispatcher view = request.getRequestDispatcher("Excluido.jsp");
+	        view.forward(request, response);
+		
+		}
 		
 	}
-	
-}
+
+}	

@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page import = "model.Pais" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>País Cadastrado</title>
+<title>Formulário Países</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">  
 </head>
@@ -17,29 +16,20 @@
 <form action="ManterPais.do" method="get">
 <br>
     <fieldset>
-        <legend style="color:white">País localizado!</legend>
 		<br>
 		<p style="color:white">
- 			 
- 			<strong>Id: </strong>${pais.id}
- 			<br>  
- 			<br>
- 			<strong>Nome: </strong>${pais.nome}
- 			<br>
- 			<br>  
- 			<strong>População: </strong>${pais.populacao}
- 			<br>
- 			<br>  
- 			<strong>Área: </strong>${pais.area}
- 			<br> 
- 			<br>  
- 			<strong>Continente: </strong>${pais.continente}
- 			<br> 
- 			
+			Digite o id que deseja excluir:
+			<br>
+			<br>
+	        Id: <input type="text" name="id" placeholder="Digite aqui o id do país">
+			<br>
 		</p>
 	</fieldset>
 	<br>
-	<br>
+	<button type="submit" align= "center" name="acao" value= "excluir" class="btn btn-outline-light" >EXCLUIR</button>
+	</p>
+
+</form>
+<br>
 
 </body>
-</html>

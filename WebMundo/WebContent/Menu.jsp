@@ -23,6 +23,13 @@
       <li class="nav-item">
         <a class="nav-link" href="Listar.jsp">Listar</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Excluir.jsp">Excluir</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="FormAlterar.jsp">Alterar</a>
+      </li>
+      
 	</ul>
     <form class="form-inline my-2 my-lg-0" action="ManterPais.do" method="get">
       <input class="form-control mr-sm-2" type="search" placeholder="Digite aqui o nome do país" name="nome" aria-label="Search">

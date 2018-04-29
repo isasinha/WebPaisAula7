@@ -24,7 +24,7 @@
 <br>
 <br>
 <br>
-<h2 style= "color:white" align= "center">Para buscar por continente, digite abaixo o continente em que ele se encontra</h2>
+<h2 style= "color:white" align= "center">Para buscar um país por continente, digite abaixo o continente em que ele se encontra</h2>
 
 <p align= "center">
 <input type="text" placeholder="Digite aqui o continente" name="continente">

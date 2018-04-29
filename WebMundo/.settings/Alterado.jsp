@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@ page import = "model.Pais" %>
 
 <!DOCTYPE html>
@@ -14,10 +15,9 @@
 <body style="background-image:url('backgroundmundo.jpg')">
 <c:import url="Menu.jsp"/>
 
-<form action="ManterPais.do" method="get">
 <br>
     <fieldset>
-        <legend style="color:white">País localizado!</legend>
+        <legend style="color:white">País Alterado com sucesso!</legend>
 		<br>
 		<p style="color:white">
  			 
@@ -32,14 +32,10 @@
  			<br>  
  			<strong>Área: </strong>${pais.area}
  			<br> 
- 			<br>  
+ 			<br>
  			<strong>Continente: </strong>${pais.continente}
- 			<br> 
- 			
+ 			<br>
 		</p>
 	</fieldset>
-	<br>
-	<br>
-
 </body>
 </html>
